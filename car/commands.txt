@@ -1,0 +1,4 @@
+  778  gcc carGui.c -c -Wall -g -o carGui.o
+  782  gcc test.c -o test carGui.o
+  783  ls
+  784  cat car.txt | ./test
