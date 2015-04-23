@@ -1,0 +1,51 @@
+  610  mkdir ders2
+  611  cd ders2
+  612  ls
+  613  vi support.h
+  614  vi support.c
+  615  ls
+  616  vi sample.c
+  617  vi support.c
+  618  vi sample.c
+  619  ls
+  620  gcc -c -Wall -o support.o support.c
+  621  ls
+  622  gcc -c -Wall -o sample.o sample.c
+  623  ls
+  624  vi sample.c
+  625  gcc -c -Wall -o sample.o sample.c
+  626  gcc sample.o support.o -o sample
+  627  ls
+  628  vi input.txt
+  629  cat input.txt | ./sample 
+  630  rm *.o
+  631  rm sample
+  632  ls
+  634  gcc -c -Wall -fpic support.c -o support.o
+  635  gcc -shared -o libSupport.so support.o
+  636  ls
+  637  rm support.o
+  638  ls
+  648  pwd
+  649  LD_LIBRARY_PATH=/home/schwappkopf/system_programming/ders2:$LD_LIBRARY_PATH
+  650  echo $LD_LIBRARY_PATH
+  652  gcc -L/home/schwappkopf/system_programming/ders2 -Wall -o sample sample.c -lSupport
+  653  cat input.txt | ./sample 
+  654  export LD_LIBRARY_PATH=/home/schwappkopf/system_programming/ders2:$LD_LIBRARY_PATH
+  655  cat input.txt | ./sample 
+
+  656  sudo cp libSupport.so /usr/lib
+  658  cd /usr/lib
+  659  ls | grep Support
+  660  ls -al | grep Support
+  661  chmod 755 libSupport.so 
+  662  sudo chmod 755 libSupport.so 
+  663  sudo ldconfig -v | grep Support
+  664  cd
+  665  cd system_programming/ders2/
+  666  ls
+  667  rm sample
+  668  gcc -Wall -o sample sample.c -lSupport
+  669  ls
+  671  make
+

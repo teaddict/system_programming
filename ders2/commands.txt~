@@ -1,0 +1,100 @@
+  578  vi GraderStatistics.h
+  579  vi GraderGUI.h
+  580  gcc GraderStatistics.c -c -Wall -g -o GraderStatistics.o
+  581  gcc GraderGUI.c -c -Wall -g -o GraderGUI.o
+  582  ar rcs libGrader.a GraderStatistics.o GraderGUI.o
+  583  gcc -g -o graderApp graderApp.c libGrader.a
+  584  cat grades.txt | ./graderApp
+  585  vi GraderGUI.c
+  586  ls
+  587  rm -rf libGrader.a 
+  588  GraderStatistics.c -c -Wall -g -o GraderStatistics.o
+  589  gcc GraderStatistics.c -c -Wall -g -o GraderStatistics.o
+  590  gcc GraderGUI.c -c -Wall -g -o GraderGUI.o
+  591  ar rcs libGrader.a GraderStatistics.o GraderGUI.o
+  592  gcc -g -o graderApp
+  593  graderApp.c libGrader.a
+  594  gcc -g -o graderApp graderApp.c libGrader.a
+  595  cat grades.txt | ./graderApp
+  596  vi GraderGUI.c
+  597  rm -rf libGrader.a 
+  598  gcc GraderStatistics.c -c -Wall -g -o GraderStatistics.o
+  599  gcc GraderGUI.c -c -Wall -g -o GraderGUI.o
+  600  ar rcs libGrader.a GraderStatistics.o GraderGUI.o
+  601  gcc -g -o graderApp graderApp.c libGrader.a
+  602  cat grades.txt | ./graderApp
+  603  vi report.txt
+  604  tar cvfz 152120111043_Fatih_metin_odev1.tgz *.c *.h *.txt *.a
+  605  ls
+  606  gpg -c 152120111043_Fatih_metin_odev1.tgz 
+  607  ls
+  608  cd system_programming/
+  609  ls
+  610  mkdir ders2
+  611  cd ders2
+  612  ls
+  613  vi support.h
+  614  vi support.c
+  615  ls
+  616  vi sample.c
+  617  vi support.c
+  618  vi sample.c
+  619  ls
+  620  gcc -c -Wall -o support.o support.c
+  621  ls
+  622  gcc -c -Wall -o sample.o sample.c
+  623  ls
+  624  vi sample.c
+  625  gcc -c -Wall -o sample.o sample.c
+  626  gcc sample.o support.o -o sample
+  627  ls
+  628  vi input.txt
+  629  cat input.txt | ./sample 
+  630  rm *.o
+  631  rm sample
+  632  ls
+  633  gcc -c -Wall -fpic support.c-o support.o
+  634  gcc -c -Wall -fpic support.c -o support.o
+  635  gcc -shared -o libSupport.so support.o
+  636  ls
+  637  rm support.o
+  638  ls
+  639  gcc -L/home/system_programming/ders2 -Wall -o sample sample.c -l Support
+  640  gcc -L/home/system_programming/ders2 -Wall -o sample sample.c -lSupport
+  641  gcc -L/home/system_programming/ders2 -Wall -o sample sample.c -l libSupport
+  642  gcc -L/home/system_programming/ders2 -Wall -o sample sample.c -libSupport
+  643  gcc -L~/system_programming/ders2 -Wall -o sample sample.c -lSupport
+  644  gcc -L/home/system_programming/ders2 -Wall -o sample sample.c -libSupport
+  645  gcc -L/home/schwappkopf/system_programming/ders2 -Wall -o sample sample.c -libSupport
+  646  gcc -L/system_programming/ders2 -Wall -o sample sample.c -libSupport
+  647  ls
+  648  pwd
+  649  LD_LIBRARY_PATH=/home/schwappkopf/system_programming/ders2:$LD_LIBRARY_PATH
+  650  echo $LD_LIBRARY_PATH
+  651* gcc -L/home/schw-Wall -o sample sample.c -libSupport
+  652  gcc -L/home/schwappkopf/system_programming/ders2 -Wall -o sample sample.c -lSupport
+  653  cat input.txt | ./sample 
+  654  export LD_LIBRARY_PATH=/home/schwappkopf/system_programming/ders2:$LD_LIBRARY_PATH
+  655  cat input.txt | ./sample 
+  656  sudo cp libSupport.so /usr/lib
+  657  cd /usr7lib
+  658  cd /usr/lib
+  659  ls | grep Support
+  660  ls -al | grep Support
+  661  chmod 755 libSupport.so 
+  662  sudo chmod 755 libSupport.so 
+  663  sudo ldconfig -v | grep Support
+  664  cd
+  665  cd system_programming/ders2/
+  666  ls
+  667  rm sample
+  668  gcc -Wall -o sample sample.c -lSupport
+  669  ls
+  670  vi Makefile
+  671  make
+  672  ls
+  673  vi Makefile
+  674  make
+  675  vi Makefile
+  676  history 50
+  677  history 100 > commands.txt
